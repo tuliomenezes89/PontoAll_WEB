@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>PontoAll</title>
+    </h:head>
+    <h:body>
+        <center>
+            <h:form>
+                Cadastro de Funcionarios <br/><br/><br/>
+                <h:panelGrid columns="2"> 
+                    Nome: <h:inputText id="txtNome" value="#{funcionariosBean.funcionario.nome}"/>
+                    Cargo: <h:inputText id="txtCargo" value="#{funcionariosBean.funcionario.cargo}"/>
+                    Data de Nascimento: <h:inputText id="txtDataNascimento" 
+                                                     value="#{funcionariosBean.funcionario.dataNascimento}"/>
+                    <h:inputHidden />
+                    <h:commandButton value="Cadastrar" action="#{funcionariosBean.adicionarFuncionario}"/>
+                </h:panelGrid>
+                <h:dataTable value="" var="tabela" border="1">
+                    <h:column>
+                        <f:facet name="header">
+                            Nome
+                        </f:facet>
+                        <h:outputText value=""/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            Cargo
+                        </f:facet>
+                        <h:outputText value=""/>
+                    </h:column>    
+                    <h:column>
+                        <f:facet name="header">
+                            Data de Nascimento
+                        </f:facet>
+                        <h:outputText value=""/>
+                    </h:column>
+                </h:dataTable>  
+            </h:form>
+            <p:menu>
+                <p:submenu>
+                    <p:menuitem value="teste" url="index_1.xhtml" />
+                </p:submenu>
+            </p:menu>
+        </center>
+    </h:body>
+</html>
+
